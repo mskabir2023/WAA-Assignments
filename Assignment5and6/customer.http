@@ -1,0 +1,36 @@
+POST http://localhost:8080/customers
+Content-Type: application/json;
+
+{
+  "firstName": "Md. Khalek",
+  "lastName": "Hossain",
+  "orders": [{
+    "date": "2023-07-30"
+  },{
+    "date": "2023-07-29"
+  },{
+    "date": "2023-07-28   "
+  }]
+}
+
+
+###
+GET http://localhost:8080/customers
+
+
+
+###
+GET http://localhost:8080/customers?firstName=abcd
+
+###
+GET http://localhost:8080/customers/byLastName?lastName=Hossain1
+
+###
+GET http://localhost:8080/customers/search?firstName=pa
+
+
+###
+DELETE http://localhost:8080/customers/4
+
+###
+GET http://localhost:8080/customers/withFullName?firstName=Mithun2&lastName=Test2
