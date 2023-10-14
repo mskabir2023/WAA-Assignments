@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "0b4d2c98-917f-48ab-9378-5055aeae4700",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{                \n    \"isbn\": \"Oimsus\",\n    \"author\": \"07392383829\",\n    \"title\": \"oim@yuo.com\",\n    \"price\": 89.88\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0LHNhbjZAZ21haWwuY29tLFVTRVIiLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTcyNTczODAsImV4cCI6MTY5NzI2MDk4MH0.qV54tGmM6gLywzsGPqsKUW9oirRHvLiKVtrTQaoOTUWbdxreVVcDHTGb8iHC9jeVl2wdufrTBN-UlUyrju6Ghg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0LHNhbjZAZ21haWwuY29tLFVTRVIiLCJpc3MiOiJNSVUiLCJpYXQiOjE2OTcyNTczODAsImV4cCI6MTY5NzI2MDk4MH0.qV54tGmM6gLywzsGPqsKUW9oirRHvLiKVtrTQaoOTUWbdxreVVcDHTGb8iHC9jeVl2wdufrTBN-UlUyrju6Ghg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"isbn\":\"23234-434\",\n    \"price\":2.40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
