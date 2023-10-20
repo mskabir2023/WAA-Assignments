@@ -3,8 +3,6 @@ import React from "react";
 import './App.css';
 import { useState } from 'react';
 
-
-
 function App() {
   const [state , setState]=useState(0)
   
@@ -19,7 +17,7 @@ function App() {
   return (
     <div className="App">
 
-     <p>The OutPut  is =  {state}</p> 
+     <h1>The OutPut  is =  {state}</h1>
 
       <button onClick={countincrease}>Count++</button>
       <br />
