@@ -1,10 +1,10 @@
-import './App.css';
+//import './App.css';
 
 import React, { Component } from 'react';
-import Counter from './components/Counter';
-import Colors from './components/Colors';
+import Counter from './component/Counter';
+import Colors from './component/Colors';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import FocusInput from "./components/FocusInput";
+import FocusInput from "./component/FocusInput";
 class App extends Component {
   render() {
     return (
