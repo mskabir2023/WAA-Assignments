@@ -1,31 +1,18 @@
-import logo from './logo.svg';
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
-import { useState } from 'react';
+import Useeffectcheck from "./useeffectcheck"
 
 function App() {
-  const [state , setState]=useState(0)
+  const [active,setActive]=useState(true);
+
+return(
+  <div>
+    {active && <Useeffectcheck />}
+
+    <button onClick={()=>setActive(false)}>Clear</button>
   
-  const countincrease=()=>{
-    setState(state+1);
-  }
-
-  const countdecrease=()=>{
-    setState(state-1);
-  }
-
-  return (
-    <div className="App">
-
-     <h1>The OutPut  is =  {state}</h1>
-
-      <button onClick={countincrease}>Count++</button>
-      <br />
-
-      <button onClick={countdecrease}>Count--</button>
-      
-    </div>
-  );
+  </div>
+)
 }
 
 export default App;
